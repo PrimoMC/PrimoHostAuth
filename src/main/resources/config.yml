@@ -1,0 +1,3 @@
+message: "&cYou can't connect to that hostname!"
+host-keys:
+  97215d3e-ec07-41dd-8482-7556f6f8835e: localhost

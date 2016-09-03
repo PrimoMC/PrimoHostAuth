@@ -1,0 +1,4 @@
+name: PrimoHostAuth
+main: net.primomc.HostAuth.PrimoHostAuth
+version: 1.0
+author: kukelekuuk00
