@@ -20,7 +20,7 @@ public class PrimoHostAuth extends Plugin
     public void onEnable()
     {
         loadConfig();
-        getProxy().getPluginManager().registerListener( this, new Listener( this ) );
+        getProxy().getPluginManager().registerListener( this, new PlayerListener( this ) );
     }
 
     private void loadConfig()

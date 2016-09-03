@@ -1,17 +1,16 @@
 package net.primomc.HostAuth;
 
 import net.md_5.bungee.api.event.LoginEvent;
-import net.md_5.bungee.api.plugin.Listener;
 import net.md_5.bungee.config.Configuration;
 import net.md_5.bungee.event.EventHandler;
 
 import java.util.UUID;
 
-public class Listener implements net.md_5.bungee.api.plugin.Listener
+public class PlayerListener implements net.md_5.bungee.api.plugin.Listener
 {
     private PrimoHostAuth plugin;
 
-    public Listener( PrimoHostAuth plugin )
+    public PlayerListener( PrimoHostAuth plugin )
     {
         this.plugin = plugin;
     }
