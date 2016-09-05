@@ -7,7 +7,7 @@ Frequently in the past, Minecraft had failures in its login code where players c
 
 The host keys feature of PrimoHostAuth is an extra barrier to impersonation. It works because an extra piece of information, not known by Mojang, has to be sent from the client during login to a server. Even if an attacker were able to break Minecraft’s login system and join as a moderator, because the attacker’s game would lack this piece of information, the server could detect impersonation.
 
-Note: Security breaches of this nature are less common these days.
+> Note: Security breaches of this nature are less common these days.
 
 #How It Works
 
@@ -22,14 +22,18 @@ Setup is done using the Configuration:
     host-keys:
         97215d3e-ec07-41dd-8482-7556f6f8835e: bagels.play.example.com
         01cb7175-a79a-4128-a02c-bb2c093b51b4: manoverboard.play.example.com
+        
+> Note: Only UUIDs are supported. Do not use usernames.
+
 #DNS Configuration
 
 To make this work, you have to make bagels.play.example.com and manoverboard.play.example.com point to your server. However, you should not add specific records for the domains that you use, because this allows attackers to easily figure out the secret domains.
 
 Rather, it is recommended that you setup “wildcard addresses.” An example of a wildcard address may be *.play.example.com, which would mean that any prefix would work (aa.play.example.com, ab.play.example.com, ac.play.example.com, etc.).
 
-Tip: If you don’t have a domain name or can’t set a wildcard address, you can use xip.io.
-Alternatives
+> Tip: If you don’t have a domain name or can’t set a wildcard address, you can use xip.io.
+
+#Alternatives
 
 An alternative to host keys, although not provided by PrimoHostAuth, is to use some sort of login command that takes a password.
 
